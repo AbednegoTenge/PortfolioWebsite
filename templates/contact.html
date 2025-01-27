@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Abednego Tenge | Contact{% endblock %}
+
+{% block content %}
+<section id="contact-me">
+    <h1>Contact Me</h1>
+    <form id="contact-form">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+    </form>
+    
+    <br>
+    
+    <p>Feel free to get in touch with me. You can reach me at <a href="mailto:thaisadfe@gmail.com" class="cta-button">thaisadfe@gmail.com</a></p>
+
+</section>
+{% endblock %}
