@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -13,6 +14,10 @@ def about():
 @app.route("/contact")
 def contact():
     return render_template('contact.html')
+
+@app.context_processor
+def copyright():
+    return {'current_year': datetime.now().year}
 
 
 if __name__ == "__main__":

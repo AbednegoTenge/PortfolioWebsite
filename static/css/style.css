@@ -25,6 +25,34 @@ header ul{
  gap: 20px;
 }
 
+.cover{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.copyright{
+    justify-content: start;
+    align-items: start;
+    display: flex;
+    padding: 25px;
+}
+
+.copyright p{
+    color: white;
+}
+
+.socials{
+    justify-content: end;
+    align-items: end;
+    display: flex;
+}
+
+.socials ul{
+    display: flex;
+    gap: 20px;
+}
+
 .container{
     margin-left: 50px;
 }
@@ -99,6 +127,7 @@ header ul{
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 
 .card:hover {
