@@ -2,10 +2,54 @@
 {%block title%}Abednego Tenge{% endblock%}
 
 {%block content%}
+<div class="cover">
     <div class="container">
-        <h1>Welcome to my website</h1>
-        <p>I'm Abednego Tenge, a passionate software developer specializing in machine learning and DevOps. <br>
+        <h1 class="animated-text">Welcome to my website</h1>
+        <p class="animated-text">I'm Abednego Tenge, a passionate software developer specializing in machine learning and DevOps. <br>
              As a dedicated Python developer, I enjoy creating innovative solutions to challenging problems.<br>
              Explore my work and feel free to connect</p>
     </div>
+    <div class="img">
+        <img src="/static/coder.webp" alt="">
+    </div>
+    <div class="skills">
+        <h3>Core Skills</h3>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="icon"><img src="/static/python.png" alt="python" height="25"></div>
+                <h3>Python Programming</h3>
+                <p>Expert in writing efficient and scalable Python code.</p>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 98%;"></div>
+                </div>
+                <div class="percentage">87%</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="icon"><img src="/static/sql.png" alt="SQL" height="25"></div>
+                <h3>MySQL</h3>
+                <p>Efficient in managing databases and optimizing queries for improved performance</p>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 95%;"></div>
+                </div>
+                <div class="percentage">92%</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="icon"><img src="/static/machinelearning.png" alt="Machine Learnig" height="50"></div>
+                <h3>Machine Learning</h3>
+                <p>Skilled in implementing machine learning algorithms for predictive modeling.</p>
+                <div class="progress-bar">
+                    <div class="progress-bar-inner" style="width: 90%;"></div>
+                </div>
+                <div class="percentage">65%</div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

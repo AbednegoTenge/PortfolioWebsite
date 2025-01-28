@@ -1,3 +1,6 @@
+body{
+background-color: black;
+}
 header{
  background-color: black;
  color: white;
@@ -26,12 +29,142 @@ header ul{
     margin-left: 50px;
 }
 
-.container p{
-    transition: all 0.3s ease;
-    color: blue;
+.container h1{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 50px;
+    font-family: serif;
 }
 
-.container p:hover{
-    color: orangered;
-    transform: scale(1.05);
+.container p{
+    transition: all 0.3s ease;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.img{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.img img{
+    border-radius: 50%; 
+    width: 200px; 
+    height: 200px;
+}
+
+.animated-text {
+    animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.skills {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1));
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #111; 
+}
+
+.card p {
+    font-size: 18px;
+    font-weight: 20; 
+    color: #111; 
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    position: relative;
+    height: 10px;
+    border-radius: 5px;
+    background: #e0e0e0;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    background: #76c7c0;
+    border-radius: 5px;
+}
+
+.percentage {
+    margin-top: 5px;
+    text-align: right;
+    color: #333;
+}
+
+@keyframes moveBorder {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
 }
