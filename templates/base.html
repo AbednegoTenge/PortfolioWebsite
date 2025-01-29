@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{%block title%}{%endblock%}</title>
     <link rel="stylesheet" href="static/css/style.css">
+    <link>{% block style%}{%endblock%}</link>
 </head>
 <body>
     <header>
@@ -17,7 +18,7 @@
         </nav>
     </header>
     {%block content%}{%endblock%}
-    <footer class="cover">
+    <footer class="footer">
         <div class="copyright">
             <p>&copy; {{ current_year }} Abednego Tenge. All rights reserved.</p>
         </div>
@@ -32,5 +33,36 @@
             </nav>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('header a');
+
+    links.forEach(link => {
+        link.addEventListener('click', function() {
+            links.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+    </script>
 </body>
 </html>
