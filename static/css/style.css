@@ -82,7 +82,7 @@ header a:active{
 }
 
 .container h1{
-    color: white;
+    color: yellowgreen;
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
@@ -150,7 +150,7 @@ header a:active{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: yellowgreen;
 }
 
 .card-container {
@@ -262,12 +262,24 @@ header a:active{
 }
 
 .cone{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 80%;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 3s forwards;
+}
+
+@keyframes fadeInUp{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .entry{
@@ -305,7 +317,7 @@ header a:active{
 }
 
 .leisure{
-    align-self: flex-start;
+    flex: 1;
     margin: 20px;
 }
 
@@ -317,4 +329,91 @@ header a:active{
     flex-direction: column;
     align-items: flex-start;
     display: flex;
+}
+
+.bucket{
+    display: flex; /* Ensures both elements are in a row */
+    align-items: flex-start; /* Aligns elements at the top */
+    gap: 70px;
+}
+
+.contain{
+    display: flex;
+    align-items: flex-end;
+    margin-top: 110px;
+    margin-left: 20px;
+}
+  
+.contain .glass {
+position: relative;
+width: 180px;
+height: 200px;
+background: linear-gradient(#fff2, transparent);
+border: 1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+display: flex;
+justify-content: center;
+align-items: center;
+transition: 0.5s;
+border-radius: 10px;
+margin: 0 -45px;
+backdrop-filter: blur(10px);
+transform: rotate(calc(var(--r) * 1deg));
+}
+
+.contain:hover .glass {
+transform: rotate(0deg);
+margin: 0 10px;
+}
+
+.contain .glass::before {
+content: attr(data-text);
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 40px;
+background: rgba(255, 255, 255, 0.05);
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+
+.contain .glass svg {
+font-size: 2.5em;
+fill: #fff;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+
+}
+.profile-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+
+}
+.profile-info {
+    max-width: 400px;
+
+}
+.profile-info h4{
+    color: lightblue;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 24px;
+    color: yellowgreen;
+}
+
+.profile-info p {
+    color: white;
 }
